@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}
+
+        {% endblock title %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/home.css') }}">
+</head>
+
+<body>
+    <div class="upperNav">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" id="logo">
+        <img src="{{ url_for('static', filename='images/large_nimblegreen.png') }}" alt="website name"
+            id="webNameImage">
+        <img src="{{ url_for('static', filename='images/tree2-removebg-preview.png') }}" alt="Tree" id="TreeImage">
+    </div>
+    <header id="header">
+        <nav class="navbar">
+            <ul>
+                <li><a href="{{ url_for('home')}}">Home</a></li>
+                <li><a href="#">MiddleMan</a></li>
+                <li><a href=" {{ url_for('register') }} ">Register</a></li>
+            </ul>
+            <div class="HomeLogin"><a href="{{ url_for('login') }}">Login</a></div>
+        </nav>
+    </header>
+    {% block body %}
+
+    {% endblock body %}
+</body>
+
+</html>

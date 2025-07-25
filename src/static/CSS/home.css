@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+/* body {
+    background-color: aliceblue;
+} */
+
+.upperNav {
+    /* border: 1px solid rgba(0, 0, 0, 0.325); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: rgb(224, 199, 169); */
+    height: 185px;
+    max-height: 185px;
+    /* border: 2px solid red; */
+}
+
+.upperNav #logo {
+    width: 140px;
+    padding: 0px 48px;
+}
+
+.upperNavRighter {
+    /* border: 2px solid blue; */
+    width: 55%;
+    height: 100%;
+    max-width: 55%;
+    max-height: 185px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.upperNav #webNameImage {
+    width: 300px;
+}
+
+.upperNav #TreeImage {
+    width: 575px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    position: relative;
+    bottom: 31px;
+    right: 21px;
+}
+
+/* 
+header{
+    position: sticky;
+    top: 0;
+} */
+
+
+.navbar {
+    /* border: 2px solid rgb(0, 13, 255); */
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #95D78C;
+}
+
+.navbar ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    position: relative;
+    transition: all 2s ease-out;
+    width: 50%;
+
+}
+
+.navbar ul a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    transition: all .2s ease-out;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.navbar ul a:hover {
+    
+    position: relative;
+    top: -3px;
+    border-bottom: 2px solid rgb(65, 32, 232);
+}
+
+.navbar .HomeLogin {
+    /* border: 2px solid red; */
+    margin-right: 100px;
+}
+
+.navbar .HomeLogin a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.navbar .HomeLogin a:hover {
+    border-bottom: 2px solid rgb(36, 189, 36);
+    position: relative;
+    top: -3px;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    color: black;
+    transition: background-color .5s ease-in-out;
+}
+
+.sticky ul li a {
+    color: black;
+}
+
+.sticky .HomeLogin a {
+    color: black;
+}
+
+#sec1{
+    /* border: 2px solid red; */
+    height: 75vh;
+    /* background-color: rgba(0, 85, 255, 0.342); */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 25px 15px;
+}
+
+#about{
+    /* background: yellow; */
+    /* border: 2px solid yellow; */
+    width: 50%;
+}
+
+#about h1{
+    text-align: center;
+    font-size: 45px;
+}
+
+#about p{
+    letter-spacing: 1.02px;
+    word-spacing: 3px;
+    padding: 20px 10px;
+}
+
+#farmerImg{
+    width: 45%;
+    background-image: url(farmer.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* border: 2px solid red; */
+    object-fit: contain;
+}
+
+.overview{
+    width: 100%;
+    height: 60px;
+    background-color: #6DB664;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-size: 25px;  
+    font-weight: 600;
+    margin: 10px 0px;
+}
+
+#sec2{
+    /* border: 2px solid rgb(0, 60, 255); */
+    height: 55vh;
+    /* background-color: rgba(0, 85, 255, 0.342); */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 25px 15px;
+}
+
+.visionMission{
+    /* border: 2px solid orange; */
+    width: 40%;
+}
+
+.visionMission h1{
+    font-size: 30px;
+}
+
+.visionMission p{
+    letter-spacing: 1.02px;
+    word-spacing: 3px;
+    padding: 15px 0px;
+    font-weight: 500;
+}
+
+footer{
+    height: 25vh;
+    width: 100%;
+    background-color: #342E37;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+}
+
+footer a{
+    color: white;
+    font-weight: 500;
+
+}

@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  /* box-sizing: border-box; */
+  /* overflow-x: hidden; */
+}
+
+body {
+  background: #f6f5f7;
+}
+
+/* nav {
+  border: 1px solid rgba(0, 0, 0, 0.673);
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  background-image: linear-gradient(to right top,
+      #5eeb6e,
+      #54d55f,
+      #4abf51,
+      #40aa43,
+      #359535);
+}
+
+nav>* {
+  margin: 9px 50px;
+}
+
+nav img {
+  width: 80px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  width: 20%;
+  justify-content: space-around;
+  height: 40px;
+  align-items: center;
+}
+
+nav ul li a {
+  font-size: 17px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+nav ul li a:hover {
+  border-bottom: 2px solid rgb(0, 0, 0);
+} */
+
+main {
+  background: #fff;
+  border-radius: 10px;
+  margin: 10%;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22)
+}
+
+.container {
+  position: relative;
+  width: 100VW;
+  max-width: 100%;
+  min-height: 90vh;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22)
+}
+
+.FarmerResgister, .MiddleManRegsiter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+
+.FarmerResgister {
+  width: 50%;
+  opacity: 0;
+  z-index: 1
+}
+
+.MiddleManRegsiter {
+  width: 50%;
+  z-index: 2;
+}
+
+form {
+  background: #fff;
+  padding: 0 20px;
+  height: 100%;
+  text-align: center;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 24px;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 15px 0 20px;
+}
+
+.InputsContainer {
+  height: 60px;
+  margin: 30px 0px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.inputfield {
+  position: relative;
+  width: 47%;
+}
+
+.inputfield label {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transition: all 0.5s ease-in-out 0s;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.inputfield input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: none;
+  border-bottom: 2px solid black;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: all .5s ease-in-out 0s;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.inputfield input:focus+label {
+  top: 0;
+  font-size: 16px;
+}
+
+.inputfield input:valid+label {
+  top: 0;
+  font-size: 16px;
+}
+
+
+
+button {
+  color: #fff;
+  background: #ff4b2b;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 50px;
+  margin: 20px;
+  border-radius: 100px;
+  border: 1px solid #ff4b2b;
+  outline: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.90);
+}
+
+#MiddleManButton, #FarmerButton {
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+
+
+.overlay {
+  position: relative;
+  color: #fff;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  background-image: linear-gradient(to right top, #2f8651, #2b9953, #28ad53, #29c051, #2ed44c);
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+
+.overlay-left, .overlay-right {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+  transform: translateX(-20%);
+}
+
+.overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.container.right-panel-active .MiddleManRegsiter {
+  transform: translateX(100%);
+}
+
+.container.right-panel-active .FarmerResgister {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: show 0.6s;
+}
+
+@keyframes show {
+  0%, 49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+
+  50%, 100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+
+.container.right-panel-active .overlay-container {
+  transform: translateX(-100%);
+}
+
+.container.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.container.right-panel-active .overlay-left {
+  transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+  transform: translateX(20%);
+}

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/profile.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/home.css') }}">
+</head>
+
+<body>
+    <div id="MainUpperContainer">
+        <div class="upperNav">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" id="logo">
+            <div class="upperNavRighter">
+                <img src="{{ url_for('static', filename='images/large_nimblegreen.png') }}" alt="website name"
+                    id="webNameImage">
+                <img src="{{ url_for('static', filename='images/tree2-removebg-preview.png') }}" alt="thee"
+                    id="treeImage">
+            </div>
+        </div>
+        <header id="header">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="{{ url_for('home')}}">Home</a></li>
+                    <li><a href="#">MiddleMan</a></li>
+                    <li><a href=" {{ url_for('register') }} ">Register</a></li>
+                </ul>
+                <div class="HomeLogin"><a href="{{ url_for('login') }}">Login</a></div>
+            </nav>
+        </header>
+        <div class="container">
+
+            <div class="header" id="farmerHeader">
+                <img src="/static/images/farmer3.jpg" alt="Farmer profile picture" class="picture">
+                <div>
+                    <h1 class="name">{{farmer.first_name}} {{farmer.last_name}}</h1>
+                    <p class="id">ID:11122</p>
+                </div>
+                <span class="phone-icon">✆</span>
+            </div>
+            <div class="text">
+                <div class="info">
+                    <div class="info-item">
+                        <span class="info-icon">🏠︎</span>
+                        <span>Address:{{farmer.stheet}},{{farmer.city}},{{farmer.state}}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">✉</span>
+                        <span>{{farmer.email}}</span>
+                    </div>
+                    <button class="button" id="debtdetail">DEBT DETAILS</button>
+                    <button class="button" id="cropsale">CROPS SALES</button>
+                    <button class="button" id="fertilizerborrow">FERTILIZER BORROW</button>
+                </div>
+
+                <img src="/static/images/farmerPfBg.jpg" alt="Oxen plowing a field" class="main-image">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- DEBT DETAILS SECTION  -->
+    <div class="debtdetails" id="DebtDetailsSection">
+        <div class="TableHeader">
+            <div>
+                <h1 style="text-align: center;     padding: 20px 0px">Debt Details</h1>
+                <img src="/static/images/tree2-removebg-preview.png" alt="Tree Branch">
+            </div>
+            <div class="backbutton">
+                <button id="debtdetailBackButton">Back</button>
+            </div>
+        </div>
+        <div class="tablecontainer">
+            <table class="table">
+                <tr>
+                    <th>Name</th>
+                    <th>Contact No.</th>
+                    <th>Tenure</th>
+                    <th>Amount</th>
+                    <th>Interest rate</th>
+                    <th>Amount paid</th>
+                    <th>Balance to paid</th>
+                </tr>
+                <tr>
+                    <td>John Doe</td>
+                    <td>9876543210</td>
+                    <td>5 years</td>
+                    <td>$50,000</td>
+                    <td>5%</td>
+                    <td>$30,000</td>
+                    <td>$20,000</td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>9123456789</td>
+                    <td>3 years</td>
+                    <td>$30,000</td>
+                    <td>4.5%</td>
+                    <td>$20,000</td>
+                    <td>$10,000</td>
+                </tr>
+                <tr>
+                    <td>Michael Brown</td>
+                    <td>9988776655</td>
+                    <td>7 years</td>
+                    <td>$70,000</td>
+                    <td>6%</td>
+                    <td>$40,000</td>
+                    <td>$30,000</td>
+                </tr>
+                <tr>
+                    <td>Emily Clark</td>
+                    <td>9876541230</td>
+                    <td>4 years</td>
+                    <td>$40,000</td>
+                    <td>4%</td>
+                    <td>$25,000</td>
+                    <td>$15,000</td>
+                </tr>
+                <tr>
+                    <td>David Lee</td>
+                    <td>9234567891</td>
+                    <td>6 years</td>
+                    <td>$60,000</td>
+                    <td>5.5%</td>
+                    <td>$35,000</td>
+                    <td>$25,000</td>
+                </tr>
+                <tr>
+                    <td>John Doe</td>
+                    <td>9876543210</td>
+                    <td>5 years</td>
+                    <td>$50,000</td>
+                    <td>5%</td>
+                    <td>$30,000</td>
+                    <td>$20,000</td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>9123456789</td>
+                    <td>3 years</td>
+                    <td>$30,000</td>
+                    <td>4.5%</td>
+                    <td>$20,000</td>
+                    <td>$10,000</td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="tableBottomImages">
+            <img src="/static/images/below_table.png" alt="Wheat Image1">
+            <img src="/static/images/below_table.png" alt="Wheat Image2">
+            <img src="/static/images/below_table.png" alt="Wheat Image3">
+            <img src="/static/images/below_table.png" alt="Wheat Image4">
+            <img src="/static/images/below_table.png" alt="Wheat Image4">
+            <img src="/static/images/below_table.png" alt="Wheat Image4">
+            <img src="/static/images/below_table.png" alt="Wheat Image4">
+            <img src="/static/images/below_table.png" alt="Wheat Image4">
+        </div>
+    </div>
+
+    <!-- CROPS SOLD SECTION  -->
+    <div class="debtdetails" id="CropsSoldSection">
+        <div class="TableHeader">
+            <div>
+
+                <h1 style="text-align: center;     padding: 20px 0px">Crops Sold</h1>
+                <img src="/static/images/tree2-removebg-preview.png" alt="Tree Branch">
+            </div>
+            <div class="backbutton">
+                <button id="CropsSoldBackButton">Back</button>
+            </div>
+        </div>
+        <div class="tablecontainer">
+            <table class="table">
+                <tr>
+                    <th>Type of crop</th>
+                    <th>Sold to</th>
+                    <th>Contact</th>
+                    <th>Quantity</th>
+                    <th>price</th>
+                    <th>Date of sale</th>
+                </tr>
+                <tr>
+                    <td>Wheat</td>
+                    <td>Green Valley Traders</td>
+                    <td>9876543210</td>
+                    <td>200 kg</td>
+                    <td>$500</td>
+                    <td>2024-07-15</td>
+                </tr>
+                <tr>
+                    <td>Rice</td>
+                    <td>AgriMart Supplies</td>
+                    <td>9123456789</td>
+                    <td>300 kg</td>
+                    <td>$750</td>
+                    <td>2024-08-02</td>
+                </tr>
+                <tr>
+                    <td>Corn</td>
+                    <td>HarvestHub Ltd.</td>
+                    <td>9988776655</td>
+                    <td>250 kg</td>
+                    <td>$600</td>
+                    <td>2024-08-20</td>
+                </tr>
+                <tr>
+                    <td>Soybeans</td>
+                    <td>Farm Fresh Co.</td>
+                    <td>9871234567</td>
+                    <td>180 kg</td>
+                    <td>$450</td>
+                    <td>2024-09-10</td>
+                </tr>
+                <tr>
+                    <td>Barley</td>
+                    <td>AgroSolutions</td>
+                    <td>9856743210</td>
+                    <td>220 kg</td>
+                    <td>$550</td>
+                    <td>2024-09-25</td>
+                </tr>
+            </table>
+        </div>
+        <div class="tableBottomImages">
+            <img src="/static/images/below_table.png" alt="Wheat Image1">
+            <img src="/static/images/below_table.png" alt="Wheat Image2">
+            <img src="/static/images/below_table.png" alt="Wheat Image3">
+            <img src="/static/images/below_table.png" alt="Wheat Image4">
+            <img src="/static/images/below_table.png" alt="Wheat Image4">
+            <img src="/static/images/below_table.png" alt="Wheat Image4">
+            <img src="/static/images/below_table.png" alt="Wheat Image4">
+            <img src="/static/images/below_table.png" alt="Wheat Image4">
+        </div>
+    </div>
+    <!-- FERTILIZER'S BORROWED -->
+    <div class="debtdetails" id="FertilizerBorrowedSection">
+        <div class="TableHeader">
+            <div>
+
+                <h1 style="text-align: center;     padding: 20px 0px">Fertilizers Borrowed</h1>
+                <img src="/static/images/tree2-removebg-preview.png" alt="Tree Branch">
+            </div>
+            <div class="backbutton">
+                <button id="FertilizerBorrowedBackButton">Back</button>
+            </div>
+        </div>
+        <div class="tablecontainer">
+            <table class="table">
+                <tr>
+                    <th>Type of fertilizer</th>
+                    <th>Borrowed from</th>
+                    <th>Contact</th>
+                    <th>Quantity</th>
+                    <th>price</th>
+                    <th>Date of borrowed</th>
+                </tr>
+                <tr>
+                    <td>Nitrogen Fertilizer</td>
+                    <td>AgriCorp Supplies</td>
+                    <td>9876543210</td>
+                    <td>50 kg</td>
+                    <td>$150</td>
+                    <td>2024-07-05</td>
+                </tr>
+                <tr>
+                    <td>Phosphate Fertilizer</td>
+                    <td>GreenLand Distributors</td>
+                    <td>9123456789</td>
+                    <td>30 kg</td>
+                    <td>$120</td>
+                    <td>2024-08-15</td>
+                </tr>
+                <tr>
+                    <td>Potassium Fertilizer</td>
+                    <td>Farm Essentials Co.</td>
+                    <td>9988776655</td>
+                    <td>40 kg</td>
+                    <td>$140</td>
+                    <td>2024-09-10</td>
+                </tr>
+                <tr>
+                    <td>Urea Fertilizer</td>
+                    <td>HarvestPlus Inc.</td>
+                    <td>9871234567</td>
+                    <td>60 kg</td>
+                    <td>$180</td>
+                    <td>2024-09-20</td>
+                </tr>
+                <tr>
+                    <td>Ammonium Nitrate</td>
+                    <td>AgroChem Solutions</td>
+                    <td>9856743210</td>
+                    <td>55 kg</td>
+                    <td>$160</td>
+                    <td>2024-10-01</td>
+                </tr>
+            </table>
+        </div>
+        <div class="tableBottomImages">
+            <img src="/static/images/below_table.png" alt="Wheat Image1">
+            <img src="/static/images/below_table.png" alt="Wheat Image2">
+            <img src="/static/images/below_table.png" alt="Wheat Image3">
+            <img src="/static/images/below_table.png" alt="Wheat Image4">
+            <img src="/static/images/below_table.png" alt="Wheat Image4">
+            <img src="/static/images/below_table.png" alt="Wheat Image4">
+            <img src="/static/images/below_table.png" alt="Wheat Image4">
+            <img src="/static/images/below_table.png" alt="Wheat Image4">
+        </div>
+        <script src="{{ url_for('static', filename='js/Farmer_dashboard.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+body {
+  /* display: flex;
+    background-color: antiquewhite;
+    justify-content: center;
+    align-items: center; */
+  min-height: 100vh;
+}
+
+/* nav {
+  border: 1px solid rgba(0, 0, 0, 0.673);
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  background-image: linear-gradient(
+    to right top,
+    #5eeb6e,
+    #54d55f,
+    #4abf51,
+    #40aa43,
+    #359535
+  );
+}
+
+nav > * {
+  margin: 7px 50px;
+}
+
+nav img {
+  width: 80px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  width: 20%;
+  justify-content: space-around;
+  height: 40px;
+  align-items: center;
+}
+
+nav ul li a {
+  font-size: 17px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+nav ul li a:hover {
+  border-bottom: 2px solid rgb(0, 0, 0);
+} */
+
+#main {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://wallpapers.com/images/hd/agriculture-green-field-2uonvfiwye6lmcep.jpg);
+  background-position: center center;
+  position: relative;
+}
+
+main .blackbox {
+  background-color: rgb(0, 0, 0);
+  min-height: 87vh;
+  height: 100%;
+  width: 100%;
+  opacity: 0.46;
+  position: absolute;
+}
+
+.container {
+  background: transparent;
+  backdrop-filter: blur(15px);
+  box-shadow: 1px 1px 13px 3px white;
+  border: none;
+  border-radius: 10px;
+}
+
+#loginform {
+  border-radius: 10px;
+  width: 350px;
+  padding: 30px 20px;
+  position: relative;
+  z-index: 10;
+}
+
+#loginform h1 {
+  text-align: center;
+  font-weight: 400;
+}
+
+.input-field {
+  /* border: 2px solid red; */
+  margin-top: 25px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.input-field label {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transition: all 0.5s ease-in-out 0s;
+  font-size: 19px;
+  font-weight: 200;
+}
+
+.input-field i {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transition: all 0.5s ease-in-out 0s;
+  font-size: 22px;
+  font-weight: 100;
+}
+
+.input-field input {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  border-bottom: 2px solid black;
+  transition: all 0.5s ease-in-out 0s;
+  font-weight: 300;
+}
+
+.input-field input:focus ~ i {
+  top: 0;
+  font-size: 17px;
+}
+
+.input-field input:valid ~ i {
+  top: 0;
+  font-size: 17px;
+}
+
+.input-field:focus-within label {
+  top: 0%;
+  font-size: 17px;
+}
+
+.input-field input:valid ~ label {
+  top: 0;
+  font-size: 17px;
+}
+
+.input-field input:focus {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.503);
+}
+
+.btn {
+  height: 70%;
+  border: 2px solid black;
+  font-size: 18px;
+  border-radius: 30px;
+  margin: 10px;
+  cursor: pointer;
+  background-image: radial-gradient(
+    circle,
+    #42b171,
+    #40b369,
+    #3fb661,
+    #40b858,
+    #43ba4d,
+    #42b243,
+    #41ab39,
+    #40a32e,
+    #389024,
+    #307e1a,
+    #286c10,
+    #205b06
+  );
+  color: black;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.btn:hover {
+  background-image: radial-gradient(
+    circle,
+    #1b683c,
+    #186c37,
+    #176f32,
+    #18732c,
+    #1b7624,
+    #1c711e,
+    #1d6b18,
+    #1e6612,
+    #1b580e,
+    #184a0b,
+    #143d08,
+    #113003
+  );
+  color: white;
+}
+
+#signuplink {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 200;
+  position: absolute;
+  left: 17%;
+  top: 0;
+}
+
+#forgotpass {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 200;
+  position: absolute;
+  left: 33%;
+  bottom: 0;
+}

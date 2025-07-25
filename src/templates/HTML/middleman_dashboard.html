@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiddleMan Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/profile.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/home.css') }}">
+</head>
+
+<body>
+    <div class="upperNav">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" id="logo">
+        <div class="upperNavRighter">
+            <img src="{{ url_for('static', filename='images/large_nimblegreen.png') }}" alt="website name"
+                id="webNameImage">
+            <img src="{{ url_for('static', filename='images/tree2-removebg-preview.png') }}" alt="Tree" id="TreeImage">
+        </div>
+    </div>
+    <header id="header">
+        <nav class="navbar">
+            <ul>
+                <li><a href="{{ url_for('home')}}">Home</a></li>
+                <li><a href="#">MiddleMan</a></li>
+                <li><a href=" {{ url_for('register') }} ">Register</a></li>
+            </ul>
+            <div class="HomeLogin"><a href="{{ url_for('login') }}">Login</a></div>
+        </nav>
+    </header>
+    <div class="container">
+
+        <div class="header" id="farmerHeader">
+            <img src="/static/images/farmer3.jpg" alt="Farmer profile picture" class="picture">
+            <div>
+                <h1 class="name">{{middleman.first_name}} {{middleman.last_name}}</h1>
+                <p class="id">ID:11122</p>
+            </div>
+            <span class="phone-icon">✆</span>
+        </div>
+        <div class="text">
+            <div class="info">
+                <div class="info-item">
+                    <span class="info-icon">🏠︎</span>
+                    <span>Address:{{middleman.street}},{{middleman.city}},{{middleman.state}}</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">✉</span>
+                    <span>{{middleman.email}}</span>
+                </div>
+                <button class="button">MONEY LENT</button>
+                <button class="button">FERTILIZERS LENT</button>
+                <button class="button">CROPS BOUGHT</button>
+            </div>
+            <img src="https://i.dawn.com/large/2019/04/5cbbe0b09d395.jpg" alt="Oxen plowing a field" class="main-image">
+
+        </div>
+    </div>
+    <script>
+        window.onscroll = function () { stickHeader() };
+        var header = document.getElementsByClassName("header")[0];
+        var sticky = header.offsetTop;
+        console.log(sticky);
+        function stickHeader() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+
+</html>

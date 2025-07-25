@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up as farmer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/signup.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/home.css') }}">
+</head>
+
+<body>
+    <!-- HEADER START   -->
+    <div class="upperNav">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" id="logo">
+        <div class="upperNavRighter">
+            <img src="{{ url_for('static', filename='images/large_nimblegreen.png') }}" alt="website name"
+                id="webNameImage">
+            <img src="{{ url_for('static', filename='images/tree2-removebg-preview.png') }}" alt="Tree" id="TreeImage">
+        </div>
+    </div>
+    <header id="header">
+        <nav class="navbar">
+            <ul>
+                <li><a href="{{ url_for('home')}}">Home</a></li>
+                <li><a href="#">MiddleMan</a></li>
+                <li><a href=" {{ url_for('register') }} ">Register</a></li>
+            </ul>
+            <div class="HomeLogin"><a href="{{ url_for('login') }}">Login</a></div>
+        </nav>
+    </header>
+    <!-- HEADER END  -->
+
+    <!-- MAIN START  -->
+    <main>
+
+        <!-- FORM CONTAINER START  -->
+        <div class="container" id="main">
+
+            <!-- FARMER FORM START  -->
+            <div class="FarmerResgister">
+                <form action="{{ url_for('farmer_register')}}" method="POST" id="FarmerRegisterForm">
+                    <h1 style="text-align: center;">Register as Farmer</h1>
+                    <div class="InputsContainer">
+                        <div class="inputfield">
+                            <input type="text" id="Fname" name="Fname" required>
+                            <label for="Fname">First Name</label>
+
+                        </div>
+                        <div class="inputfield">
+                            <input type="text" id="land" name="land" required>
+                            <label for="land">How much land you have ?</label>
+                        </div>
+                    </div>
+                    <div class="InputsContainer">
+                        <div class="inputfield">
+                            <input type="text" id="Lname" name="Lname" required>
+                            <label for="Lname">Last Name</label>
+                        </div>
+                        <div class="inputfield">
+                            <input type="text" id="street" name="street" required>
+                            <label for="street">Street</label>
+
+                        </div>
+                    </div>
+                    <div class="InputsContainer">
+                        <div class="inputfield">
+                            <input type="number" id="PhoneNo" name="PhoneNo" required>
+                            <label for="PhoneNo">Contact No.</label>
+
+                        </div>
+                        <div class="inputfield">
+                            <input type="text" id="city" name="city" required>
+                            <label for="city">City/Village</label>
+
+                        </div>
+                    </div>
+
+                    <div class="InputsContainer">
+                        <div class="inputfield">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email</label>
+
+                        </div>
+                        <div class="inputfield">
+                            <input type="text" id="state" name="state" required>
+                            <label for="state">State</label>
+
+                        </div>
+                    </div>
+                    <div class="InputsContainer">
+                        <div class="inputfield">
+                            <input type="password" id="pass" name="pass" required>
+                            <label for="Pass">Set Password</label>
+                        </div>
+                        <div class="inputfield">
+                            <input type="text" id="crop" name="crops" required>
+                            <label for="crops">crops you field ?</label>
+                        </div>
+                    </div>
+
+                    <button>Register</button>
+                    <p class="loginlink">Already have an account ? <a href="#">Login </a> here</p>
+                </form>
+            </div>
+            <!-- FARMER FORM END  -->
+
+
+            <!-- MIDDLE MAN FORM START  -->
+            <div class="MiddleManRegsiter">
+                <form action="{{ url_for('middleman_register')}}" method="post" id="MiddleManRegsiterForm">
+                    <h1 style="text-align: center;">Register as Middleman</h1>
+                    <div class="InputsContainer">
+                        <div class="inputfield">
+                            <input type="text" id="FnameMiddleman" name="FnameMiddleman" required>
+                            <label for="FnameMiddleman">First Name</label>
+                        </div>
+                        <div class="inputfield">
+                            <input type="text" id="interest" name="interset" required>
+                            <label for="interest">Your interset rates</label>
+                        </div>
+                    </div>
+                    <div class="InputsContainer">
+                        <div class="inputfield">
+                            <input type="text" id="LnameMiddleman" name="LnameMiddleman" required>
+                            <label for="LnameMiddleman">Last Name</label>
+                        </div>
+                        <div class="inputfield">
+                            <input type="text" id="streetMiddleman" name="streetMiddleman" required>
+                            <label for="streetMiddleman">Street</label>
+
+                        </div>
+                    </div>
+                    <div class="InputsContainer">
+                        <div class="inputfield">
+                            <input type="number" id="PhoneNoMiddleman" name="PhoneNoMiddelMan" required>
+                            <label for="PhoneNoMiddleman">Contact No.</label>
+
+                        </div>
+                        <div class="inputfield">
+                            <input type="text" id="cityMiddleman" name="cityMiddleman" required>
+                            <label for="cityMiddleman">City/Village</label>
+
+                        </div>
+                    </div>
+
+                    <div class="InputsContainer">
+                        <div class="inputfield">
+                            <input type="email" id="emailMiddleman" name="emailMiddleman" required>
+                            <label for="emailMiddleman">Email</label>
+
+                        </div>
+                        <div class="inputfield">
+                            <input type="text" id="stateMiddleman" name="stateMiddleman" required>
+                            <label for="stateMiddleman">State</label>
+
+                        </div>
+                    </div>
+                    <div class="InputsContainer">
+                        <div class="inputfield">
+                            <input type="password" id="passMiddleman" name="passMiddleman" required>
+                            <label for="passMiddleman">Set Password</label>
+                        </div>
+                        <div class="inputfield">
+                            <input type="text" id="cropMiddleman" name="cropsMiddleman" required>
+                            <label for="cropMiddleman">crops you deal in ?</label>
+                        </div>
+                    </div>
+                    <button>Register</button>
+                    <p class="loginlink">Already have an account ? <a href="#">Login </a> here</p>
+                </form>
+            </div>
+            <!-- MIDDLE MAN FORM END  -->
+
+
+            <!-- OVER LAYER START  -->
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-left">
+                        <h1>Not a Farmer ?</h1>
+                        <p>Click below and Resgiter as a Middle man</p>
+                        <button id="MiddleManButton">Middle man</button>
+                    </div>
+                    <div class="overlay-right">
+                        <h1>Are you a Farmer ?</h1>
+                        <p>Click below to register as a Farmer</p>
+                        <button id="FarmerButton">Farmer</button>
+                    </div>
+                </div>
+            </div>
+            <!-- OVER LAYER END  -->
+
+
+        </div>
+        <!-- FORM CONTAINER END  -->
+
+
+    </main>
+    <!-- MAIN END  -->
+    <script src="{{ url_for('static', filename='js/signup.js') }}"></script>
+</body>
+
+</html>

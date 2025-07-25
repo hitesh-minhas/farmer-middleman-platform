@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/home.css') }}">
+</head>
+
+<body>
+    <div class="upperNav">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" id="logo">
+        <div class="upperNavRighter">
+            <img src="{{ url_for('static', filename='images/large_nimblegreen.png') }}" alt="website name"
+                id="webNameImage">
+            <img src="{{ url_for('static', filename='images/tree2-removebg-preview.png') }}" alt="Tree" id="TreeImage">
+        </div>
+    </div>
+    <header id="header">
+        <nav class="navbar">
+            <ul>
+                <li><a href="{{ url_for('home')}}">Home</a></li>
+                <li><a href="#">MiddleMan</a></li>
+                <li><a href=" {{ url_for('register') }} ">Register</a></li>
+            </ul>
+            <div class="HomeLogin"><a href="{{ url_for('login') }}">Login</a></div>
+        </nav>
+    </header>
+    <main id="main">
+        <section id="sec1">
+            <div id="about">
+                <h1>About us</h1>
+                <p>We are a dedicated team of farmers, agricultural enthusiasts, and experts
+                    working together to create a sustainable and prosperous future for farming
+                    communities worldwide. Our mission is to empower farmers by providing them
+                    <br>
+                    with the tools,knowledge, and resources they need to thrive in today’s rapidly
+                    <br>
+                    changing world.
+                    <br>
+                    At 'Company Name' we believe in the power of agriculture to nourish,
+                    sustain, and transform lives. We are committed to promoting sustainable
+                    practices, sharing valuable insights, and connecting farmers with the latest
+                    technologies to enhance productivity and ensure long-term success.
+                </p>
+            </div>
+            <div id="farmerImg">
+
+            </div>
+        </section>
+        <section class="overview">
+            Nimble Green overview
+        </section>
+        <section id="sec2">
+            <div class="visionMission">
+                <h1>Vision</h1>
+                <p>VISIONTo promote uniformity in agriculture marketing by streamlining of procedures across the
+                    integrated markets, removing information asymmetry between buyers and sellers and promoting real
+                    time price discovery based on actual demand and supply.
+                </p>
+            </div>
+
+            <div class="visionMission">
+                <h1>Mission</h1>
+                <p>MISSION
+                    Integration of APMCs across the country through a common online market platform to facilitate
+                    pan-India trade in agriculture commodities, providing better price discovery through transparent
+                    auction process based on quality of produce along with timely online payment..
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="#">Privacy Policy</a>
+        <p>&copy; Copyright 2023 National Agriculture Market Project. All rights reserved</p>
+    </footer>
+    <script>
+        window.onscroll = function () { stickHeader() };
+        var header = document.getElementById("header");
+        var sticky = header.offsetTop;
+        console.log(sticky);
+        function stickHeader() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+
+</html>

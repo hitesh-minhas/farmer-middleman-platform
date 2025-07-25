@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer login</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/home.css') }}">
+</head>
+
+<body>
+    <!-- <div class="blackbox"></div> -->
+
+    <div class="upperNav">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" id="logo">
+        <div class="upperNavRighter">
+            <img src="{{ url_for('static', filename='images/large_nimblegreen.png') }}" alt="website name"
+                id="webNameImage">
+            <img src="{{ url_for('static', filename='images/tree2-removebg-preview.png') }}" alt="Tree" id="TreeImage">
+        </div>
+    </div>
+    <header id="header">
+        <nav class="navbar">
+            <ul>
+                <li><a href="{{ url_for('home')}}">Home</a></li>
+                <li><a href="#">MiddleMan</a></li>
+                <li><a href=" {{ url_for('register') }} ">Register</a></li>
+            </ul>
+            <div class="HomeLogin"><a href="{{ url_for('login') }}">Login</a></div>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="blackbox"></div>
+        <div class="container">
+            <form action="{{ url_for('login') }}" id="loginform" method="post">
+                <h1>Log In </h1>
+                <div class="input-field">
+                    <input type="email" id="emial-input" name="Email" required>
+                    <label for="email">E-mail</label>
+                    <i class='bx bxl-gmail'></i>
+                </div>
+                <div class="input-field">
+                    <input type="password" required id="password" name="password">
+                    <label for="password">Password</label>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <div class="input-field">
+                    <button class="btn" id="submit">Log in</button>
+                </div>
+                <div class="input-field ">
+                    <p id="signuplink">Don't have an account ? <a href="#">Sign up</a></p>
+                    <a href="#" id="forgotpass">Forgot Password ?</a>
+                </div>
+
+            </form>
+        </div>
+    </main>
+    <script>
+        window.onscroll = function () { stickHeader() };
+        var header = document.getElementById("header");
+        var sticky = header.offsetTop;
+        console.log(sticky);
+        function stickHeader() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+
+</html>
